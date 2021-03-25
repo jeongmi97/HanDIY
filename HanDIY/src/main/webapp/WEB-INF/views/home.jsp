@@ -4,13 +4,25 @@
 	pageEncoding="UTF-8"%>
 <html>
 <head>
-	<title>Home</title>
+	<title>HanDIY</title>
+	<style>
+		
+	</style>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
 
-<P>  The time on the server is ${serverTime}. </P>
+<header>
+	<div>
+		<div>HanDIY</div>
+		<div>크리에이터 페이지</div>
+		<div>로그인</div>
+	</div>
+</header>
+
+<nav>
+	
+</nav>
+
+
 </body>
 </html>

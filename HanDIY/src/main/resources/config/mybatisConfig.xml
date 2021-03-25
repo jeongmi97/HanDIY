@@ -4,5 +4,8 @@
 
 <configuration> 
 
+	<!-- <typeAliases>
+		<typeAlias alias="" type=""/>
+	</typeAliases> -->
 
 </configuration>

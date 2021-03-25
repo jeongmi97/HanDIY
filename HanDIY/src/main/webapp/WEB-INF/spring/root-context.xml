@@ -16,9 +16,9 @@
 	<!-- 스프링 DataSource 객체 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://13.209.239.145:3306/handiy_p?characterEncoding=UTF-8" />
+		<property name="url" value="jdbc:mysql://spring-mysql.cmy4gazqwdq0.ap-northeast-2.rds.amazonaws.com:3306/handiy_p?characterEncoding=UTF-8" />
 		<property name="username" value="jeongmi" />
-		<property name="password" value="jeongmi" />
+		<property name="password" value="jeongmi1" />
 		
 		<property name="initialSize" value="0"/>
 		<property name="minIdle" value="0"/>

@@ -1,12 +1,10 @@
 package com.spring.controller;
 
-import java.sql.Connection;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 import javax.inject.Inject;
-import javax.sql.DataSource;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -18,10 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
-
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class HomeController {
 	
