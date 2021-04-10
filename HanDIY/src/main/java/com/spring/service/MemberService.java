@@ -59,4 +59,9 @@ public class MemberService {
 		
 		return mav;
 	}
+
+	public int emailCheck(String email_m) {
+		int chk = dao.emailCheck(email_m);
+		return chk;
+	}
 }

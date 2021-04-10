@@ -9,5 +9,7 @@ public interface MemberDAO {
 
 	int joinM(MemberVO vo);
 
+	int emailCheck(String email_m);
+
 	
 }

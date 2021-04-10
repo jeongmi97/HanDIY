@@ -1,12 +1,14 @@
 package com.spring.controller;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.service.MemberService;
@@ -44,5 +46,13 @@ public class MemberController {
 	@RequestMapping("index")
 	public void index() {
 		System.out.println("index 페이지 이동");
+	}
+	
+	// 이메일 중복 체크
+	@GetMapping("emailCheck")
+	public @ResponseBody int emailCheck(@RequestParam("email_m")String email_m) {
+		int chk = ms.emailCheck(email_m);
+		System.out.println("이메일 중복확인===" + email_m);
+		return chk;
 	}
 }
