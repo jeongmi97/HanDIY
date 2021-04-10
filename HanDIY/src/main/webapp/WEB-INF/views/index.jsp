@@ -9,6 +9,6 @@
 <body>
 
 ------------index------------
-
+이메일 : ${loginM.email_m }
 </body>
 </html>

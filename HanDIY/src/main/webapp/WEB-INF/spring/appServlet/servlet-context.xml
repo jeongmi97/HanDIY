@@ -23,4 +23,16 @@
 	
 	<context:component-scan base-package="com.spring.controller" />
 	
+	<!-- 인터셉터 빈 등록 -->
+	<beans:bean id="MemberInterceptor" class="com.spring.interceptor.MemberInterceptor"></beans:bean>
+	
+	<!-- 인터셉터 호출 위한 url mapping -->
+	<interceptors>
+		<!-- 멤버 관련 인터셉터 url mapping -->
+		<interceptor>
+			<mapping path="/index"/>
+			<beans:ref bean="MemberInterceptor"/>
+		</interceptor>
+	</interceptors>
+	
 </beans:beans>

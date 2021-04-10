@@ -33,7 +33,7 @@ public class MemberService {
 		MemberVO loginM = dao.pwChkM(vo);	// 암호화된 비밀번호 비교하기 위해 입력한 이메일에 맞는 멤버 정보 가져옴
 		boolean pwChk = pwEncoder.matches(vo.getPw_m(), loginM.getPw_m()); // db의 비밀번호와 입력 비밀번호 비교 후 맞으면 true, 틀리면 false 반환
 		
-		if(loginM != null && pwChk == true) {	// 입력 이메일에 맞는 멤버가 있고, 비밀번호 체크가 true일 경우
+		if(loginM != null && pwChk == true) {	// 입력 이메일에 일치하는 멤버가 있고, 비밀번호 체크가 true일 경우
 			session.setAttribute("loginM", loginM);	// 멤버 로그인 세션에 멤버 정보 저장		
 		}else {
 			System.out.println("======로그인 실패=======");
@@ -49,8 +49,8 @@ public class MemberService {
 		ModelAndView mav = new ModelAndView("redirect:/login");	// 회원가입 성공 시 로그인 페이지로 이동
 		
 		// 입력받은 memberVO의 pw값을 이용해 암호화 인코딩한 후 memberVO의 pw값에 다시 셋팅
-		String pw = pwEncoder.encode(vo.getPw_m());
-		vo.setPw_m(pw);
+		String enPw = pwEncoder.encode(vo.getPw_m());
+		vo.setPw_m(enPw);
 		
 		if(dao.joinM(vo) != 1) {
 			System.out.println("======회원가입 실패======");
